@@ -1,1 +1,132 @@
+//FUNCTION :-
+//Function declaration
+// function greet(name){
+//     console.log('hello ' + name)
 
+// }
+// greet('hamza')
+
+//CALLBACK
+// function greet(callback){
+//     console.log('Hello')
+//     callback();
+// }
+
+// function bye(){
+//     console.log('GoodBye')
+// }
+// greet(bye)
+// function greet(name) {
+//     console.log("Hello " + name);
+// }
+
+// function processUser(callback) {
+//     callback("Hamza");
+// }
+
+// processUser(greet);
+//TEST EASY Q1
+// function greet(name){
+// console.log('hello '+ name)
+// }
+// function call(callback){
+//     callback('Hamza')
+// }
+// call(greet)
+//Q3
+// function  morning(name){
+//     console.log('Good Morning '+ name)
+// }
+// function  evening(name){
+//     console.log('Good Evening '+ name)
+// }
+// function execute(callback){
+//     callback('Hamza')
+// }
+// execute(evening)
+//Medium Q4
+// function calculater(a, b ,operation){
+//     operation(a,b)
+// }
+// function divide(a,b ){
+//     let res = a / b
+//     console.log(res + ' divided')
+// }
+// function multiply(a,b ){
+//     let res = a * b
+//     console.log(res + ' multiply')
+// }
+// calculater(10 ,  2 ,multiply)
+//Q5 it is confusing but what i understand 
+// function processName(name , callback){
+//     console.log('Name :'+ name)
+//     callback(name)
+// }
+// function uppercaseName(data){
+//     console.log('the name is in uppercase '+ data.toUpperCase())
+// }
+// function welcome(data){
+//     console.log('Welcome '+ data)
+// }
+// processName('Hamza',uppercaseName)
+//Q6
+
+//Hard Q7 it is same as Q4 
+// function performOperation(a ,b , action)
+// {
+//     action(a ,b )
+// }
+// function divide(a,b ){
+//     let res = a / b
+//     console.log(res + ' divided')
+// }
+// function multiply(a,b ){
+//     let res = a * b
+//     console.log(res + ' multiply')
+// }
+// function Add(a,b ){
+//     let res = a + b
+//     console.log(res + ' Added')
+// }
+// function Sub(a,b ){
+//     let res = a - b
+//     console.log(res + ' Subtracted')
+// }
+// performOperation(25 ,25 ,Add)
+// Q8 i dont understand create 3 different callback but i will try 
+// function runtask(taskName,callback){
+//     console.log(`Starting <${taskName}>`)
+//     callback()
+// }
+// function read(data){
+//     data(data)
+// }
+// function workout(data){
+//     data(data)
+// }
+// function study(data){
+//     data()
+// }
+// runtask('Studing' ,study)i dont get it 
+//CALLBACK TASK RUNNER PROJECT 
+function runtask(name, status, callback) {
+    console.log(`TaskName: ${name}`);
+    console.log(`Status: ${status}`);
+    callback(name);
+}
+
+function reading(task) {
+    console.log("Reading the Quran => " + task);
+}
+
+function learning(task) {
+    console.log("Learning JS => " + task);
+}
+
+function workout(task) {
+    console.log("Working OUT => " + task);
+}
+
+runtask("Javascript", "Completed", learning);
+runtask("Reading", "Completed", reading);
+runtask("Squat", "Completed", workout);
