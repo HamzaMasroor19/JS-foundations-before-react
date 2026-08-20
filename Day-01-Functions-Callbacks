@@ -5,6 +5,13 @@
 // }
 // greet('hamza')
 
+//Function Expression
+let greet = function (name){
+    console.log('hello ' + name)
+
+}
+console.log(greet('Hamza'))
+
 //CALLBACK
 // function greet(callback){
 //     console.log('Hello')
