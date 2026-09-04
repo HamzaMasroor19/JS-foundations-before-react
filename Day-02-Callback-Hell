@@ -43,3 +43,24 @@ orderFood(function () {
 
 // Inversion of Control:
 // When you pass a callback to another function, you give that function control over when and how your callback is executed.
+
+
+// Another Simple Example
+//Login → Get User → Get Posts → Show Posts
+login(function () {
+
+    getUser(function () {
+
+        getPosts(function () {
+
+            showPosts(function () {
+
+                console.log("Done");
+
+            });
+
+        });
+
+    });
+
+});
