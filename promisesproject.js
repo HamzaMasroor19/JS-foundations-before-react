@@ -61,3 +61,41 @@ logincheck
 .catch(function(error) {
     console.log(error);
 });
+
+// Project Practice — Hotel Booking System
+const promises =new Promise((resolve,reject)=>{
+    let name = "Hamza";
+    let room = 203;
+    if(name==="Hamza"&&room===203){
+        resolve("Booking successful")
+    }else{
+        reject("Booking failed")
+    }
+})
+let Room_price = 5000;
+let Amount_paid = 5000;
+promises.then((result)=>{
+    console.log(result)
+    return new Promise((resolve)=>{
+        resolve("Room verified")
+    })
+})
+.then((result)=>{
+    console.log(result)
+    if(Amount_paid>=Room_price){
+        return "Payment successful"
+    }else{
+        throw"Insufficient payment"
+    }
+})
+.then((result)=>{
+console.log(result)
+return "Booking confirmed"
+})
+.then((result)=>{
+    console.log(result)
+    console.log("Enjoy your stay!")
+})
+.catch((error)=>{
+    console.log(error)
+})
