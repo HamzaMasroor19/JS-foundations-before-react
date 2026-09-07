@@ -1,3 +1,14 @@
+// let promise = new Promise((resolve, reject) => {
+//     let success=false;
+//     if(success){
+//         resolve("Done");
+//     }else{
+//         reject("Not Done")
+//     }
+// })
+// .then(result => console.log(result))
+// .catch(error => console.log(error))
+// console.log(promise)
 // const promise = new Promise((resolve,reject) => {
 //     resolve('ITS DONE');
 // });
