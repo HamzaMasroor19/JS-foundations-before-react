@@ -83,23 +83,41 @@
 // .finally(()=>{
 //     console.log("DONE Completed")
 // })
-//6
-const promise = new Promise((resolve,reject)=>{
-    let passwordcheck = false;
-    if(passwordcheck){
-        resolve("correct")
-    }else{
-        reject("incorrect")
-    }
-})
 
-promise.then((result)=>{
-    console.log(result)
-})
-.catch((result)=>{
-    console.log(result)
-})
-.finally(()=>{
-    console.log("completed transaction")
-})
+
+const weatherPromise = new Promise((resolve, reject) => {
+  let isSunny = true; 
+
+  if (isSunny) {
+    resolve("The weather is great! Let's go to the beach."); 
+  } else {
+    reject("It is raining. Stay inside."); 
+  }
+});
+weatherPromise
+  .then((message) => {
+    console.log("Success: " + message); 
+  })
+  .catch((error) => {
+    console.log("Error: " + error);
+  });
+//6
+// const promise = new Promise((resolve,reject)=>{
+//     let passwordcheck = false;
+//     if(passwordcheck){
+//         resolve("correct")
+//     }else{
+//         reject("incorrect")
+//     }
+// })
+
+// promise.then((result)=>{
+//     console.log(result)
+// })
+// .catch((result)=>{
+//     console.log(result)
+// })
+// .finally(()=>{
+//     console.log("completed transaction")
+// })
 
