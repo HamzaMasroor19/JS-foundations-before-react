@@ -85,23 +85,44 @@
 // })
 
 
-const weatherPromise = new Promise((resolve, reject) => {
-  let isSunny = true; 
+// const weatherPromise = new Promise((resolve, reject) => {
+//   let isSunny = true; 
 
-  if (isSunny) {
-    resolve("The weather is great! Let's go to the beach."); 
-  } else {
-    reject("It is raining. Stay inside."); 
-  }
-});
-weatherPromise
-  .then((message) => {
-    console.log("Success: " + message); 
-  })
-  .catch((error) => {
-    console.log("Error: " + error);
-  });
-//6
+//   if (isSunny) {
+//     resolve("The weather is great! Let's go to the beach."); 
+//   } else {
+//     reject("It is raining. Stay inside."); 
+//   }
+// });
+// weatherPromise
+//   .then((message) => {
+//     console.log("Success: " + message); 
+//   })
+//   .catch((error) => {
+//     console.log("Error: " + error);
+//   });
+
+const cart = ["shoes", "pants", "kurta"];
+
+createOrder(cart)
+    .then(function(orderId) {
+
+        console.log("Order ID:", orderId);
+
+        return proceedToPayment(orderId);
+    })
+
+    .then(function(paymentInfo) {
+
+        console.log(paymentInfo);
+
+    })
+
+    .catch(function(error) {
+
+        console.log(error.message);
+
+    });
 // const promise = new Promise((resolve,reject)=>{
 //     let passwordcheck = false;
 //     if(passwordcheck){
